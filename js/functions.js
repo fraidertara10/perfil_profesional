@@ -1,71 +1,127 @@
-// alert("functions activo")
-// ############### tipo de variables
+// alert("FUCTION ACTIVO CHAMO");
+// ####################### Tipo de variable
 // const para valores constantes
 const pi = 3.1416;
 const pul = 2.54;
-// var para varibles globales 
-var days = 10;
-var name = "fraider ";
+// var para variables globales
+var days= 10;
+var name = "Wilder Duarte";
 // let para variables de bloque o locales 
-let count = 1; 
-// ############### formas de impresion
-//alert
+let count = 1;
+
+// ################ formas de impresion
+// alert
 // alert(name);
-//cosole.log
-
+// console.log
 console.log(name);
-//body pantalla
-document.write(name + " tarazona");
-document.getElementById("box_one").innerHTML = "<h1>fraider tarazona</h1>"
-document.getElementById("box_two").innerText = "<h1>fraider tarazona</h1>"
-//librerias
+// body - pantalla
+document.write(name + "######Wilder duarte");
+document.getElementById("box_one").innerHTML = "<h1>Wilder Duarte</h1>"
+document.getElementById("box_two").innerText = "<h1>Wilder Duarte</h1>"
+// librerias
+Swal.fire({
+     icon: 'error',
+     showConfirmButton: false,
+     title:name,
+     text:name,
+     footer: "footer " + name,
+     background: 'green',
+     position: 'top-start'
+});
 
-// Swal.fire(
-//     'The Internet?',
-//     'That thing is still around?',
-//     'question'
-//   )
 
-// Swal.fire({
-//     icon:'error',
-//     showConfirmButton:false,
-//     title:name,
-//     text:name,
-//     footer:"footer: " + name,
-//     background: "green",
-//     position:'top-start'
-// });
-// ###############tipos de datos
-var number_one =20;
-var number_two =5.5;
-//text
-var class_type ="electiva Tecnica 1";
-//booleanos
-var boolean =true; // false
-// array - vectores
+// ############### tipos de datos
+
+// numericos
+
+var number_one = 20;
+var number_two = 5.5;
+
+// texto 
+var clase_type = "electiva Tecnica 1";
+
+// boleanos
+var boolean = true; //false
+
+// arrays - vectores
+
 var array_num = [1,2,3,4,5,6];
-var array_tex = ["LUNES","MARTES","MIERCOLES","JUEVES","VIERNES","SABADO","DOMINGO"];
-var array_mix =  [1,"a",2,"c"];
-var array_mil= [
-    {name:"", last_name:"fraider" ,age:"32"},
-    {name:"", last_name:"antonio" ,age:"2"},
-    {name:"", last_name:"morales" ,age:"12"},
-    {name:"", last_name:"tarazona" ,age:"22"},
+var array_text = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+var array_mix = [1,"a",2,"c"];
+var array_mu = [
+    {name: "Wilder",last_name:"Duarte",age:"31"},
+    {name: "Anyi",last_name:"Martinez",age:"32"},
+    {name: "Celeste",last_name:"Duarte",age:"3"},
+    {name: "Antonella",last_name:"Duarte",age:"1"}
 ]
-// ############### operadores basicos
 
-//suma
+// ############# operadores basicos 
+//Suma
 var suma = number_one + number_two;
-console.log("suma "+suma);
-//resta
+console.log("Suma = "+suma);
+// resta
 var resta = number_one - number_two;
-console.log("resta "+resta);
-//multipicacion
-var multiplicacio = number_one * number_two;
-console.log("multiplicacion "+multiplicacio);
-//division
-var division = number_one / number_two;
-console.log("division "+division.toFixed(2));
-//modulo
-var modulo= number_one % number_two;
-console.log("modulo "+modulo);
+console.log("Resta = "+resta);
+// multiplicacion
+var multi = number_one * number_two;
+console.log("Multiplicacion = "+multi);
+// division
+var divi = number_one / number_two;
+console.log("Division = "+divi.toFixed(2));
+// modulo
+var modulo = number_one % number_two;
+console.log("Modulo = "+modulo);
+// operadores logicos y estructuras condicionales (inverse, incremento y decremento)
+// And && con if - Ampersand
+var bool = false;
+var numeric = "10";
+if(!bool && numeric === "10"){ //bool == true
+    console.log("ENTRA IF");
+}
+else{
+    console.log("ENTRA ELSE");
+}
+
+if(!bool || numeric == 7){
+    console.log("ENTRA IF");
+    numeric++;
+}else{
+    console.log("ENTRA ELSE");
+    numeric--;
+}
+console.log(numeric)
+//FOR 
+// for(let j = 0; j<array_text.length; j++){
+//     console.log(array_text[j]+" "+(j+1))
+// }
+// while
+// let f = 0;
+// while(f<array_text.length){
+//     console.log(array_text[f]+" "+(f+1));   
+//     f++
+// }
+// do while
+let x = 0;
+do{
+    console.log(array_text[x]+" "+(x+1));
+    x++;
+}while(x<array_text.length);
+
+// FUNCIONES Y EVENTOS
+
+function load_page(){
+    alert("LA PAGINA SE HA CARGADO CORRECTAMENTE");
+}
+function change_Color(){
+    document.body.style.backgroundColor="red";
+    document.body.style.color="white";
+}
+
+const clear_color = document.querySelector("#clear_color");
+clear_color.addEventListener("dblclick",() => {
+    document.body.style.backgroundColor="#fff";
+    document.body.style.color="#000";
+})
+
+// REGISTRO FORMULARIO
+const form_register = document.getElementById("form_register");

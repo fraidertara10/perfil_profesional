@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>    
-   
- 
+<body onload="load_page()">
     <label for="" id="box_one"></label>
     <label for="" id="box_two"></label>
-    <script src="../js/code.jquery.com_jquery-3.7.1.js"></script>
+    <button onclick="change_Color()" >CAMBIAR COLOR</button>
+    <button id="clear_color">LIMPIAR COLOR</button>
+    <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <form id="form_register">
+        <br><br>
+        <label for="">Nombres</label>
+        <input type="text" id="" size="30" placeholder="Escriba sus Nombres">
+        <br><br>
+        <label for="">Apellidos</label>
+        <input type="text" id="" size="30" placeholder="Escriba sus Apellidos">
+        <br><br>
+        <button type="submit">REGISTRARSE</button>
+        <button type="reset">LIMPIAR</button>
+        <br>
+        <p id="information"></p>
+    </form>
+
+    <br><br>
     <script src="../js/functions.js"></script>
     <script>
-        var a =4;
-        var b =5;
-
-        // alert(a+b );
+        var a = 5;
+        var b = 2;
+        // alert(a+b);
     </script>
-
 </body>
 </html>
