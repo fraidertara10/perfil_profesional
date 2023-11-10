@@ -19,15 +19,15 @@ document.write(name + "######Wilder duarte");
 document.getElementById("box_one").innerHTML = "<h1>Wilder Duarte</h1>"
 document.getElementById("box_two").innerText = "<h1>Wilder Duarte</h1>"
 // librerias
-Swal.fire({
-     icon: 'error',
-     showConfirmButton: false,
-     title:name,
-     text:name,
-     footer: "footer " + name,
-     background: 'green',
-     position: 'top-start'
-});
+// Swal.fire({
+//      icon: 'error',
+//      showConfirmButton: false,
+//      title:name,
+//      text:name,
+//      footer: "footer " + name,
+//      background: 'green',
+//      position: 'top-start'
+// });
 
 
 // ############### tipos de datos
@@ -48,7 +48,7 @@ var boolean = true; //false
 var array_num = [1,2,3,4,5,6];
 var array_text = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
 var array_mix = [1,"a",2,"c"];
-var array_mu = [
+var array_mul = [
     {name: "Wilder",last_name:"Duarte",age:"31"},
     {name: "Anyi",last_name:"Martinez",age:"32"},
     {name: "Celeste",last_name:"Duarte",age:"3"},
@@ -110,8 +110,15 @@ do{
 // FUNCIONES Y EVENTOS
 
 function load_page(){
-    alert("LA PAGINA SE HA CARGADO CORRECTAMENTE");
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disable= true;
+   let date = new Date();
+   console.log(date.getMinutes());
+   for(let j=0; j<array_mul.length; j++){
+    console.log(array_mul[j].name);
+   }
 }
+
 function change_Color(){
     document.body.style.backgroundColor="red";
     document.body.style.color="white";
@@ -125,3 +132,15 @@ clear_color.addEventListener("dblclick",() => {
 
 // REGISTRO FORMULARIO
 const form_register = document.getElementById("form_register");
+function validate(){
+    let nombres = document.getElementById("nombres").value;
+    let nombres_style = document.getElementById("nombres");
+    if(nombres.length > 2 ){
+        nombres_style.style.border = "2px solid green";
+        document.getElementById("apellidos").disable= false;
+        document.getElementById("apellidos").focus();
+        ducument.getElementById("nombres").value = "";
+       alert(nombres.split(" "));
+    }
+   
+}
