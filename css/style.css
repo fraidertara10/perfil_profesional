@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-@media (max-width: 768px){
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -396,4 +396,4 @@ body{
 
 .footer_img{
     width: 30px;
-}}
+}
